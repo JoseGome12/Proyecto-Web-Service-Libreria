@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32510.428
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BibliotecaP", "BibliotecaP\BibliotecaP.csproj", "{0678AF32-A712-4CBF-84A3-DC7F9EFA440E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{63F144B2-342E-440E-B176-DC284F4AEA99} = {63F144B2-342E-440E-B176-DC284F4AEA99}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebServiceBiblioteca", "WebServiceBiblioteca\WebServiceBiblioteca.csproj", "{63F144B2-342E-440E-B176-DC284F4AEA99}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0678AF32-A712-4CBF-84A3-DC7F9EFA440E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0678AF32-A712-4CBF-84A3-DC7F9EFA440E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0678AF32-A712-4CBF-84A3-DC7F9EFA440E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0678AF32-A712-4CBF-84A3-DC7F9EFA440E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63F144B2-342E-440E-B176-DC284F4AEA99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63F144B2-342E-440E-B176-DC284F4AEA99}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63F144B2-342E-440E-B176-DC284F4AEA99}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63F144B2-342E-440E-B176-DC284F4AEA99}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {762B435B-BF3C-43D5-92B6-17A6F91D2FA4}
+	EndGlobalSection
+EndGlobal

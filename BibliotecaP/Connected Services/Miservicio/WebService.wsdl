@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="VerificarCredenciales">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="contraseña" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VerificarCredencialesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="VerificarCredencialesResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VerificarUsuario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="contraseña" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VerificarUsuarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="VerificarUsuarioResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IdUsuario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="contraseña" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IdUsuarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IdUsuarioResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CrearUsuario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="contraseña" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CrearUsuarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CrearUsuarioResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Verlibros">
+        <s:complexType />
+      </s:element>
+      <s:element name="VerlibrosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="VerlibrosResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AgregarLibro">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="idUsuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="idLibro" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AgregarLibroResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AgregarLibroResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VerTusLibors">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="idUsuario" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VerTusLiborsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="VerTusLiborsResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EliminarLibro">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="idPrestamo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EliminarLibroResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="EliminarLibroResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="VerificarCredencialesSoapIn">
+    <wsdl:part name="parameters" element="tns:VerificarCredenciales" />
+  </wsdl:message>
+  <wsdl:message name="VerificarCredencialesSoapOut">
+    <wsdl:part name="parameters" element="tns:VerificarCredencialesResponse" />
+  </wsdl:message>
+  <wsdl:message name="VerificarUsuarioSoapIn">
+    <wsdl:part name="parameters" element="tns:VerificarUsuario" />
+  </wsdl:message>
+  <wsdl:message name="VerificarUsuarioSoapOut">
+    <wsdl:part name="parameters" element="tns:VerificarUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IdUsuarioSoapIn">
+    <wsdl:part name="parameters" element="tns:IdUsuario" />
+  </wsdl:message>
+  <wsdl:message name="IdUsuarioSoapOut">
+    <wsdl:part name="parameters" element="tns:IdUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="CrearUsuarioSoapIn">
+    <wsdl:part name="parameters" element="tns:CrearUsuario" />
+  </wsdl:message>
+  <wsdl:message name="CrearUsuarioSoapOut">
+    <wsdl:part name="parameters" element="tns:CrearUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="VerlibrosSoapIn">
+    <wsdl:part name="parameters" element="tns:Verlibros" />
+  </wsdl:message>
+  <wsdl:message name="VerlibrosSoapOut">
+    <wsdl:part name="parameters" element="tns:VerlibrosResponse" />
+  </wsdl:message>
+  <wsdl:message name="AgregarLibroSoapIn">
+    <wsdl:part name="parameters" element="tns:AgregarLibro" />
+  </wsdl:message>
+  <wsdl:message name="AgregarLibroSoapOut">
+    <wsdl:part name="parameters" element="tns:AgregarLibroResponse" />
+  </wsdl:message>
+  <wsdl:message name="VerTusLiborsSoapIn">
+    <wsdl:part name="parameters" element="tns:VerTusLibors" />
+  </wsdl:message>
+  <wsdl:message name="VerTusLiborsSoapOut">
+    <wsdl:part name="parameters" element="tns:VerTusLiborsResponse" />
+  </wsdl:message>
+  <wsdl:message name="EliminarLibroSoapIn">
+    <wsdl:part name="parameters" element="tns:EliminarLibro" />
+  </wsdl:message>
+  <wsdl:message name="EliminarLibroSoapOut">
+    <wsdl:part name="parameters" element="tns:EliminarLibroResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WebServiceSoap">
+    <wsdl:operation name="VerificarCredenciales">
+      <wsdl:input message="tns:VerificarCredencialesSoapIn" />
+      <wsdl:output message="tns:VerificarCredencialesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VerificarUsuario">
+      <wsdl:input message="tns:VerificarUsuarioSoapIn" />
+      <wsdl:output message="tns:VerificarUsuarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IdUsuario">
+      <wsdl:input message="tns:IdUsuarioSoapIn" />
+      <wsdl:output message="tns:IdUsuarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CrearUsuario">
+      <wsdl:input message="tns:CrearUsuarioSoapIn" />
+      <wsdl:output message="tns:CrearUsuarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Verlibros">
+      <wsdl:input message="tns:VerlibrosSoapIn" />
+      <wsdl:output message="tns:VerlibrosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AgregarLibro">
+      <wsdl:input message="tns:AgregarLibroSoapIn" />
+      <wsdl:output message="tns:AgregarLibroSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VerTusLibors">
+      <wsdl:input message="tns:VerTusLiborsSoapIn" />
+      <wsdl:output message="tns:VerTusLiborsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarLibro">
+      <wsdl:input message="tns:EliminarLibroSoapIn" />
+      <wsdl:output message="tns:EliminarLibroSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WebServiceSoap" type="tns:WebServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="VerificarCredenciales">
+      <soap:operation soapAction="http://tempuri.org/VerificarCredenciales" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerificarUsuario">
+      <soap:operation soapAction="http://tempuri.org/VerificarUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IdUsuario">
+      <soap:operation soapAction="http://tempuri.org/IdUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CrearUsuario">
+      <soap:operation soapAction="http://tempuri.org/CrearUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Verlibros">
+      <soap:operation soapAction="http://tempuri.org/Verlibros" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AgregarLibro">
+      <soap:operation soapAction="http://tempuri.org/AgregarLibro" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerTusLibors">
+      <soap:operation soapAction="http://tempuri.org/VerTusLibors" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarLibro">
+      <soap:operation soapAction="http://tempuri.org/EliminarLibro" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WebServiceSoap12" type="tns:WebServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="VerificarCredenciales">
+      <soap12:operation soapAction="http://tempuri.org/VerificarCredenciales" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerificarUsuario">
+      <soap12:operation soapAction="http://tempuri.org/VerificarUsuario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IdUsuario">
+      <soap12:operation soapAction="http://tempuri.org/IdUsuario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CrearUsuario">
+      <soap12:operation soapAction="http://tempuri.org/CrearUsuario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Verlibros">
+      <soap12:operation soapAction="http://tempuri.org/Verlibros" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AgregarLibro">
+      <soap12:operation soapAction="http://tempuri.org/AgregarLibro" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerTusLibors">
+      <soap12:operation soapAction="http://tempuri.org/VerTusLibors" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarLibro">
+      <soap12:operation soapAction="http://tempuri.org/EliminarLibro" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WebService">
+    <wsdl:port name="WebServiceSoap" binding="tns:WebServiceSoap">
+      <soap:address location="https://localhost:44368/WebService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WebServiceSoap12" binding="tns:WebServiceSoap12">
+      <soap12:address location="https://localhost:44368/WebService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
